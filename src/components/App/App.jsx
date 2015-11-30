@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from './App.css';
+import style from './App.css'; // eslint-disable-line no-unused-vars
 
 class App extends Component {
   render() {

@@ -44,6 +44,7 @@ if(TARGET === 'start' || !TARGET) {
         {test: /\.jsx?$/, loader: 'eslint-loader', include: APP_PATH },
       ],
       loaders: [
+        { test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/, loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]' },
         { test: /\.css$/, loaders: ['style', 'css'], include: APP_PATH },
         { test: /\.jsx?$/, loaders: ['react-hot', 'babel'], include: APP_PATH },
       ],
@@ -70,6 +71,7 @@ if ( TARGET === 'build' || TARGET === 'stats' || (/^deploy.*$/.test(TARGET)) ) {
     },
     module: {
       loaders: [
+        { test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/, loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]' },
         { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css'), include: APP_PATH },
         { test: /\.jsx?$/, loaders: ['babel'], include: APP_PATH },
       ],

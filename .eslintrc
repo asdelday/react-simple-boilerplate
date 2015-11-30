@@ -1,5 +1,13 @@
 {
   "extends": "airbnb",
+  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "classes": true,
+    "jsx": true
+  },
+  "plugins": [
+    "react"
+  ],
   "globals": {
     "__DEV__": true
   },
